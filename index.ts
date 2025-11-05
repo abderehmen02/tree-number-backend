@@ -18,6 +18,6 @@ app.get("/", (req, res) => res.status(200).json({ success: true }));
 app.use("/auth", authRoutes);
 app.use("/tree-nodes", treeNodesRoutes);
 
-app.listen(5000, () => {
-  console.log("Server running on http://localhost:3000");
+app.listen(process.env.PORT, () => {
+  console.log(`Server running on http://localhost:${process.env.PORT}`);
 });
